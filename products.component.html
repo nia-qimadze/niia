@@ -1,0 +1,18 @@
+
+
+<section class="d-flex gap-3 justify-content-center flex-wrap m-5">
+    <div *ngFor="let product of products" class="card" style="width: 18rem;">
+        <img [src]="product.image" class="card-img-top" [alt]="product.name">
+        <div class="card-body">
+          <h5 class="card-title">{{product.name}}</h5>
+          <a routerLink="./details" 
+          [queryParams]="{
+            img: product.image,
+            name: product.name,
+            price: product.price
+          }"
+            class="btn btn-primary"
+            >see details</a>
+        </div>
+      </div>
+</section>
