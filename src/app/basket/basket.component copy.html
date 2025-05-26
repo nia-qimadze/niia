@@ -1,0 +1,19 @@
+
+
+
+<section class="d-flex gap-3 justify-content-center flex-wrap m-5">
+    <div *ngFor="let product of products"  class="card" style="width: 18rem;">
+        <img [src]="product.product.image" class="card-img-top" [alt]="product.product.name">
+        <div class="card-body">
+          <h5 class="card-title">name: {{product.product.name}}</h5>
+          <h5 class="card-title">Price {{product.product.price}}</h5>
+          <h5 class="card-title">Total Price: {{product.price}}</h5>
+
+          <h5 class="card-title">quantity: {{product.quantity}}</h5>
+
+          <a  class="btn btn-primary" (click)="deleteProduct(product.product.id)">delete</a>
+          <a  class="btn btn-primary" (click)="incrementProduct(product)">+</a>
+          <a  class="btn btn-primary">-</a>
+        </div>
+      </div>
+</section>

@@ -1,0 +1,12 @@
+
+
+<section class="d-flex gap-3 justify-content-center flex-wrap m-5">
+    <div *ngFor="let obj of products.products" class="card" style="width: 18rem;">
+        <img [src]="obj.image" class="card-img-top" [alt]="obj.name">
+        <div class="card-body">
+          <h5 class="card-title">name: {{obj.name}}</h5>
+          <h5 class="card-title">price: {{obj.price}}</h5>
+          <a class="btn btn-primary" (click)="postProduct(obj)">add to cart</a>
+        </div>
+      </div>
+</section>
